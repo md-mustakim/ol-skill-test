@@ -15,13 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route('employee.index');
 });
-
-Route::get('mail',function (){
-
-    return new \App\Mail\EmployeeNotify(\App\Models\Employee::find(7));
-});
-
 
 Route::resource('employee', EmployeeController::class);

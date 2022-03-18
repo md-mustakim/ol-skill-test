@@ -36,21 +36,11 @@
                         <label for="phone" class="col-md-2">Phone</label>
                         <div class="col-md-10 mb-3">
                             <input type="text" class="form-control is-invalid" id="phone" name="phone" value="{{ old('phone') }}">
-                            <div class="">
-                                Please choose a username.
-                            </div>
                         </div>
                     </div>
-
-
-
                     <div class="form-group">
                         <button type="submit" class="btn btn-success">Register</button>
                     </div>
-
-
-
-
                 </form>
             </div>
         </div>
