@@ -43,9 +43,7 @@ class EmailNotification extends Notification implements ShouldQueue
      */
     public function toMail($notifiable)
     {
-        return (new MailMessage)
-                    ->greeting('Dear '.$this->employee->name.',')
-                    ->line('Thank  you for your registration. Your registered email address is '.$this->employee->email);
+        return (new MailMessage)->markdown('emails.employee-registired', ['employee' => $this->employee]);
     }
 
     /**
